@@ -1,0 +1,127 @@
+html, body{
+  	margin: 0;
+    padding: 0;
+
+}
+ 
+ div.container {
+ 		
+	    position: relative;
+	    display: block;
+	     overflow: hidden;
+ }
+div.container div.background_stop {
+
+	  	background: url("../Images/Fantasy_World_Game_Background_by_Nashki/PNG_Exports/Single_Tileable_Image/3x/Solid_World_Bright.png") repeat-x;
+	  	background-size: 200% 100%;
+	  	background-repeat: repeat-x;
+	  	width: 340%;
+	  	height: 100%;
+    	z-index: 1;
+    	
+    	position: absolute;
+    	
+}	
+div.container div.background_start {
+
+	  	background: url("../Images/Fantasy_World_Game_Background_by_Nashki/PNG_Exports/Single_Tileable_Image/3x/Solid_World_Bright.png") repeat-x;
+	  	background-size: 200% 100%;
+	  	background-repeat: repeat-x;
+	  	width: 340%;
+	  	height: 100%;
+    	z-index: 1;
+    	
+    	position: absolute;
+    	animation: slide 3s linear infinite;
+}
+
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-70%, 0, 0);
+  }
+}
+
+div.container div.controls {
+	bottom: 80%;
+	left: 15%;
+	position: absolute;
+	height: 29px;
+    width: 5%;
+    z-index: 3;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 18%;
+    box-shadow: 10px 10px 10px;
+}
+
+div.container ul li
+{	
+	list-style: none;
+	bottom: 80%;
+	
+	position: absolute;
+	height: 3%;
+    width: 6.5%;
+    z-index: 4;
+	border: 1px solid #0047F3;
+	background-color: #E2E5FF;
+    border-radius: 18%;
+    box-shadow: 10px 10px 10px;
+    text-align: center;
+}
+
+div.container div.player {
+	bottom: 15%;
+	left: 30%;
+	
+	position: absolute;
+	
+
+    height: 140px;
+    width: 108px;
+  
+	background-image: url("../Images/scottpilgrim_multiple.png"); 
+	background-repeat: repeat-x;
+    z-index: 2;
+    
+
+}
+
+.slideRight{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+
+	animation-duration: 5s;	
+	-webkit-animation-duration: 5s;
+
+	animation-timing-function: linear;	
+	-webkit-animation-timing-function: linear;		
+
+	animation-iteration-count: infinite;
+
+	visibility: visible !important;	
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(0%);
+	}
+	100%{
+		transform: translateX(1400%);
+	}
+
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(0%);
+	}
+	100%{
+		-webkit-transform: translateX(1400%);
+	}
+
+}
